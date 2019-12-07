@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 
-				<?php echo form_open_multipart('Gallery/create_Gallery');?>
+				<?php echo form_open_multipart('gallery/create_gallery');?>
 				<div class="box-body">
 					<div class="form-group">
 						<label for="gallerytitle">Gallery Title :</label>

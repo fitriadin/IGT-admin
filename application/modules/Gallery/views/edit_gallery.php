@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 				
-				<?php echo form_open_multipart('Gallery/update_Gallery');?>
+				<?php echo form_open_multipart('gallery/update_gallery');?>
 				<?php
 							foreach ($gallery as $data) {
 							?>

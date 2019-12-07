@@ -55,7 +55,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-									<a href="<?php echo base_url().'Clients/add_Clients/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									<a href="<?php echo base_url().'clients/add_clients/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
 								</div>
 							<table>
 									<thead>
@@ -80,16 +80,16 @@
 								<td><?php echo  $data->client_name ;?></td>
 								<td>
 								<?php if (!empty($data->client_image)): ?>
-								<img src="<?php echo base_url('assets/images/Clients/'.$data->client_image) ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/clients/'.$data->client_image) ?>" width="64" />
 								<?php else : ?>
-								<img src="<?php echo base_url('assets/images/Clients/default.jpg') ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/clients/default.jpg') ?>" width="64" />
 								<?php endif; ?>
 							</td>
 
 								<td><?php echo  $data->client_website ;?></td>
 								<td>														 
-									<a href="<?php echo base_url().'Clients/edit_Clients/'.$data->id_client.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
-									<a href="<?php echo base_url().'Clients/delete_Clients/'.$data->id_client.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
+									<a href="<?php echo base_url().'clients/edit_clients/'.$data->id_client.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
+									<a href="<?php echo base_url().'clients/delete_clients/'.$data->id_client.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
 								</td>
 								</tr>
 								<?php endforeach ?>

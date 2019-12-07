@@ -100,7 +100,7 @@ class Profile extends MY_Controller {
 	   if ($this->form_validation->run() ==  FALSE ) {
 		   # code...
 		   $this->session->set_flashdata('error', 'something wrong, please check your input');
-		   redirect(base_url('Profile'));
+		   redirect(base_url('profile'));
 		} else {
 			# code...
 					$id_profile = $this->input->post('id_profile');
@@ -142,7 +142,7 @@ class Profile extends MY_Controller {
 					$this->M_profile->update_($where,$data,'profile');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Profile'));
+					redirect(base_url('profile'));
 				}
 				else {
 					$id_profile = $this->input->post('id_profile');
@@ -173,10 +173,10 @@ class Profile extends MY_Controller {
 					$this->M_profile->update_($where,$data,'profile');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Profile'));
+					redirect(base_url('profile'));
 					 } }
 					 else {
-					redirect(base_url('Profile'));
+					redirect(base_url('profile'));
 					}				 
 				}
 			}

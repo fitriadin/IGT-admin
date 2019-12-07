@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 
-				<?php echo form_open_multipart('Clients/create_Clients');?>
+				<?php echo form_open_multipart('clients/create_clients');?>
 				<div class="box-body">
 					<div class="form-group">
 						<label for="clientsname">Clients Name :</label>

@@ -96,7 +96,7 @@ class Users extends MY_Controller {
 			# code...
 			$id_user = $this->input->post('id_user');
 			$email = $this->input->post('email');
-			$username = $this->input->post('username');
+			$username = md5($this->input->post('username'));
 			$password = $this->input->post('password');
 			$level = $this->input->post('level');
 

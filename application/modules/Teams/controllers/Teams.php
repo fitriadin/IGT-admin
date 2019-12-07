@@ -23,7 +23,7 @@ class Teams extends MY_Controller {
 		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Teams/v_Teams', $data);
+		$this->load->view('teams/v_teams', $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -44,7 +44,7 @@ class Teams extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Teams'));
+			redirect(base_url('teams'));
 		} else {
 			# code...
 			$Teamsname = $this->input->post('teamname');
@@ -66,7 +66,7 @@ class Teams extends MY_Controller {
 					$this->M_Teams->create_($data,'team');
 		
 					$this->session->set_flashdata('succes', 'Data Success saved');
-					redirect(base_url('Teams'));
+					redirect(base_url('teams'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -86,7 +86,7 @@ class Teams extends MY_Controller {
 			$this->M_Teams->create_($data,'team');
 
 			$this->session->set_flashdata('succes', 'Data Succes Save');
-			redirect(base_url('Teams'));
+			redirect(base_url('teams'));
 					}	
 				}
 			}
@@ -98,7 +98,7 @@ class Teams extends MY_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/menu' );
-		$this->load->view('Teams/add_Teams');
+		$this->load->view('teams/add_teams');
 		$this->load->view('template/footer');
 
 
@@ -115,7 +115,7 @@ class Teams extends MY_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Teams/edit_Teams', $data);
+		$this->load->view('teams/edit_teams', $data);
 		$this->load->view('template/footer', $data);
 
 
@@ -138,7 +138,7 @@ class Teams extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Teams'));
+			redirect(base_url('teams'));
 		} else {
 			# code...
 			$id_Teams = $this->input->post('id_team');
@@ -163,7 +163,7 @@ class Teams extends MY_Controller {
 					$this->M_Teams->update_($where,$data,'team');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Teams'));
+					redirect(base_url('teams'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -186,10 +186,10 @@ class Teams extends MY_Controller {
 					$this->M_Teams->update_($where,$data,'team');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Teams'));
+					redirect(base_url('teams'));
 					 } }
 					 else {
-					redirect(base_url('Teams'));
+					redirect(base_url('teams'));
 					}				 
 				}
 			}
@@ -212,7 +212,7 @@ class Teams extends MY_Controller {
         
 			$data = $this->M_Teams->delete_($where,'team');	
 			$this->session->set_flashdata('delete', 'Data Succes Delete');
-			redirect(base_url('Teams'));
+			redirect(base_url('teams'));
 	
 		
 			}

@@ -23,7 +23,7 @@ class Portfolio extends MY_Controller {
 		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Portfolio/v_Portfolio', $data);
+		$this->load->view('portfolio/v_portfolio', $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -44,7 +44,7 @@ class Portfolio extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Portfolio'));
+			redirect(base_url('portfolio'));
 		} else {
 			# code...
 			$portfolioname = $this->input->post('portfolioname');
@@ -66,7 +66,7 @@ class Portfolio extends MY_Controller {
 					$this->M_Portfolio->create_($data,'portfolio');
 		
 					$this->session->set_flashdata('succes', 'Data Success saved');
-					redirect(base_url('Portfolio'));
+					redirect(base_url('portfolio'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -86,7 +86,7 @@ class Portfolio extends MY_Controller {
 			$this->M_Portfolio->create_($data,'portfolio');
 
 			$this->session->set_flashdata('succes', 'Data Succes Save');
-			redirect(base_url('Portfolio'));
+			redirect(base_url('portfolio'));
 					}	
 				}
 			}
@@ -98,7 +98,7 @@ class Portfolio extends MY_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/menu' );
-		$this->load->view('Portfolio/add_Portfolio');
+		$this->load->view('portfolio/add_portfolio');
 		$this->load->view('template/footer');
 
 
@@ -115,7 +115,7 @@ class Portfolio extends MY_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Portfolio/edit_Portfolio', $data);
+		$this->load->view('portfolio/edit_portfolio', $data);
 		$this->load->view('template/footer', $data);
 
 
@@ -138,7 +138,7 @@ class Portfolio extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Portfolio'));
+			redirect(base_url('portfolio'));
 		} else {
 			# code...
 			$id_portfolio = $this->input->post('id_portfolio');
@@ -163,7 +163,7 @@ class Portfolio extends MY_Controller {
 					$this->M_Portfolio->update_($where,$data,'portfolio');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Portfolio'));
+					redirect(base_url('portfolio'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -186,10 +186,10 @@ class Portfolio extends MY_Controller {
 					$this->M_Portfolio->update_($where,$data,'portfolio');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Portfolio'));
+					redirect(base_url('portfolio'));
 					 } }
 					 else {
-					redirect(base_url('Portfolio'));
+					redirect(base_url('portfolio'));
 					}				 
 				}
 			}
@@ -212,7 +212,7 @@ class Portfolio extends MY_Controller {
         
 			$data = $this->M_Portfolio->delete_($where,'portfolio');	
 			$this->session->set_flashdata('delete', 'Data Succes Delete');
-			redirect(base_url('Portfolio'));
+			redirect(base_url('portfolio'));
 	
 		
 			}

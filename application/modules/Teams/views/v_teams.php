@@ -55,7 +55,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-									<a href="<?php echo base_url().'Teams/add_Teams/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									<a href="<?php echo base_url().'teams/add_teams/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
 								</div>
 							<table>
 									<thead>
@@ -81,16 +81,16 @@
 								<td><?php echo  $data->team_position ;?></td>
 								<td>
 								<?php if (!empty($data->team_image)): ?>
-								<img src="<?php echo base_url('assets/images/Teams/'.$data->team_image) ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/teams/'.$data->team_image) ?>" width="64" />
 								<?php else : ?>
-								<img src="<?php echo base_url('assets/images/Teams/default.jpg') ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/teams/default.jpg') ?>" width="64" />
 								<?php endif; ?>
 							</td>
 
 								
 								<td>														 
-									<a href="<?php echo base_url().'Teams/edit_Teams/'.$data->id_team.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
-									<a href="<?php echo base_url().'Teams/delete_Teams/'.$data->id_team.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
+									<a href="<?php echo base_url().'teams/edit_teams/'.$data->id_team.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
+									<a href="<?php echo base_url().'teams/delete_teams/'.$data->id_team.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
 								</td>
 								</tr>
 								<?php endforeach ?>

@@ -24,7 +24,7 @@ class Services extends MY_Controller {
 		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Services/v_Services', $data);
+		$this->load->view('services/v_services', $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -45,7 +45,7 @@ class Services extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Services'));
+			redirect(base_url('services'));
 		} else {
 			# code...
 			$servicename = $this->input->post('servicename');
@@ -67,7 +67,7 @@ class Services extends MY_Controller {
 					$this->M_Services->create_($data,'service');
 		
 					$this->session->set_flashdata('succes', 'Data Success saved');
-					redirect(base_url('Services'));
+					redirect(base_url('services'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -87,7 +87,7 @@ class Services extends MY_Controller {
 			$this->M_Services->create_($data,'service');
 
 			$this->session->set_flashdata('succes', 'Data Succes Save');
-			redirect(base_url('Services'));
+			redirect(base_url('services'));
 					}	
 				}
 			}
@@ -99,7 +99,7 @@ class Services extends MY_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/menu' );
-		$this->load->view('Services/add_Services');
+		$this->load->view('services/add_services');
 		$this->load->view('template/footer');
 
 
@@ -116,7 +116,7 @@ class Services extends MY_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Services/edit_Services', $data);
+		$this->load->view('services/edit_services', $data);
 		$this->load->view('template/footer', $data);
 
 
@@ -139,7 +139,7 @@ class Services extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Services'));
+			redirect(base_url('services'));
 		} else {
 			# code...
 			$id_service = $this->input->post('id_service');
@@ -187,10 +187,10 @@ class Services extends MY_Controller {
 					$this->M_Services->update_($where,$data,'service');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Services'));
+					redirect(base_url('services'));
 					 } }
 					 else {
-					redirect(base_url('Services'));
+					redirect(base_url('services'));
 					}				 
 				}
 			}
@@ -213,7 +213,7 @@ class Services extends MY_Controller {
         
 			$data = $this->M_Services->delete_($where,'service');	
 			$this->session->set_flashdata('delete', 'Data Succes Delete');
-			redirect(base_url('Services'));
+			redirect(base_url('services'));
 	
 		
 			}

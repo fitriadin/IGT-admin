@@ -110,7 +110,7 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="dropdown-icon fe fe-help-circle"></i> Need help?
                                         </a>
-                                        <a class="dropdown-item" href="<?php echo base_url('/Auth/logout');?>">
+                                        <a class="dropdown-item" href="<?php echo base_url('/auth/logout');?>">
                                             <i class="dropdown-icon fe fe-log-out"></i> Sign out
                                         </a>
                                     </div>

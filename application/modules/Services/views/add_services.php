@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 
-				<?php echo form_open_multipart('Services/create_Services');?>
+				<?php echo form_open_multipart('services/create_services');?>
 				<div class="box-body">
 					<div class="form-group">
 						<label for="servicename">Service Name :</label>

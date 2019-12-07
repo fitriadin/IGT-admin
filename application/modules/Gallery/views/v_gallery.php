@@ -55,7 +55,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-									<a href="<?php echo base_url().'Gallery/add_Gallery/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									<a href="<?php echo base_url().'gallery/add_gallery/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
 								</div>
 							<table>
 									<thead>
@@ -87,8 +87,8 @@
 
 								
 								<td>														 
-									<a href="<?php echo base_url().'Gallery/edit_Gallery/'.$data->id_gallery.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
-									<a href="<?php echo base_url().'Gallery/delete_Gallery/'.$data->id_gallery.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
+									<a href="<?php echo base_url().'gallery/edit_gallery/'.$data->id_gallery.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
+									<a href="<?php echo base_url().'gallery/delete_gallery/'.$data->id_gallery.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
 								</td>
 								</tr>
 								<?php endforeach ?>

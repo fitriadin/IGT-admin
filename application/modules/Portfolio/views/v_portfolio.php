@@ -55,7 +55,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-									<a href="<?php echo base_url().'Portfolio/add_Portfolio/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									<a href="<?php echo base_url().'portfolio/add_portfolio/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
 								</div>
 							<table>
 									<thead>
@@ -81,14 +81,14 @@
 								<td><?php echo  $data->portfolio_description ;?></td>
 								<td>
 								<?php if (!empty($data->portfolio_image)): ?>
-								<img src="<?php echo base_url('assets/images/Portfolio/'.$data->portfolio_image) ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/portfolio/'.$data->portfolio_image) ?>" width="64" />
 								<?php else : ?>
-								<img src="<?php echo base_url('assets/images/Portfolio/default.jpg') ?>" width="64" />
+								<img src="<?php echo base_url('assets/images/portfolio/default.jpg') ?>" width="64" />
 								<?php endif; ?>
 							</td>
 								<td>														 
-									<a href="<?php echo base_url().'Portfolio/edit_Portfolio/'.$data->id_portfolio.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
-									<a href="<?php echo base_url().'Portfolio/delete_Portfolio/'.$data->id_portfolio.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
+									<a href="<?php echo base_url().'portfolio/edit_portfolio/'.$data->id_portfolio.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
+									<a href="<?php echo base_url().'portfolio/delete_portfolio/'.$data->id_portfolio.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
 								</td>
 								</tr>
 								<?php endforeach ?>

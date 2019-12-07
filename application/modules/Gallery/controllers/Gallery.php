@@ -23,7 +23,7 @@ class Gallery extends MY_Controller {
 		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Gallery/v_Gallery', $data);
+		$this->load->view('gallery/v_gallery', $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -43,7 +43,7 @@ class Gallery extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Gallery'));
+			redirect(base_url('gallery'));
 		} else {
 			# code...
 			$Galleryname = $this->input->post('gallerytitle');
@@ -62,7 +62,7 @@ class Gallery extends MY_Controller {
 					$this->M_Gallery->create_($data,'gallery');
 		
 					$this->session->set_flashdata('succes', 'Data Success saved');
-					redirect(base_url('Gallery'));
+					redirect(base_url('gallery'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -80,7 +80,7 @@ class Gallery extends MY_Controller {
 			$this->M_Gallery->create_($data,'gallery');
 
 			$this->session->set_flashdata('succes', 'Data Succes Save');
-			redirect(base_url('Gallery'));
+			redirect(base_url('gallery'));
 					}	
 				}
 			}
@@ -92,7 +92,7 @@ class Gallery extends MY_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/menu' );
-		$this->load->view('Gallery/add_Gallery');
+		$this->load->view('gallery/add_gallery');
 		$this->load->view('template/footer');
 
 
@@ -109,7 +109,7 @@ class Gallery extends MY_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
-		$this->load->view('Gallery/edit_Gallery', $data);
+		$this->load->view('gallery/edit_gallery', $data);
 		$this->load->view('template/footer', $data);
 
 
@@ -131,7 +131,7 @@ class Gallery extends MY_Controller {
 		if ($this->form_validation->run() ==  FALSE ) {
 			# code...
 			$this->session->set_flashdata('error', 'something wrong, please check your input');
-			redirect(base_url('Gallery'));
+			redirect(base_url('gallery'));
 		} else {
 			# code...
 			$id_Gallery = $this->input->post('id_gallery');
@@ -154,7 +154,7 @@ class Gallery extends MY_Controller {
 					$this->M_Gallery->update_($where,$data,'gallery');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Gallery'));
+					redirect(base_url('gallery'));
 				}
 				// $filefoto = $this->input->post('old_image');
 			    else {
@@ -175,10 +175,10 @@ class Gallery extends MY_Controller {
 					$this->M_Gallery->update_($where,$data,'gallery');
 		
 					$this->session->set_flashdata('update', 'Data Succes update');
-					redirect(base_url('Gallery'));
+					redirect(base_url('gallery'));
 					 } }
 					 else {
-					redirect(base_url('Gallery'));
+					redirect(base_url('gallery'));
 					}				 
 				}
 			}
@@ -201,7 +201,7 @@ class Gallery extends MY_Controller {
         
 			$data = $this->M_Gallery->delete_($where,'gallery');	
 			$this->session->set_flashdata('delete', 'Data Succes Delete');
-			redirect(base_url('Gallery'));
+			redirect(base_url('gallery'));
 	
 		
 			}

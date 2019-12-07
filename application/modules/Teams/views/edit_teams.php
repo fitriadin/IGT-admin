@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 				
-				<?php echo form_open_multipart('Teams/update_Teams');?>
+				<?php echo form_open_multipart('teams/update_teams');?>
 				<?php
 							foreach ($team as $data) {
 							?>

@@ -55,7 +55,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-									<a href="<?php echo base_url().'services/add_Services/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									<a href="<?php echo base_url().'services/add_services/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
 								</div>
 							<table>
 									<thead>
@@ -87,8 +87,8 @@
 								<?php endif; ?>
 							</td>
 								<td>														 
-									<a href="<?php echo base_url().'Services/edit_Services/'.$data->id_service.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
-									<a href="<?php echo base_url().'Services/delete_Services/'.$data->id_service.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
+									<a href="<?php echo base_url().'services/edit_services/'.$data->id_service.'';?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>&nbsp;
+									<a href="<?php echo base_url().'services/delete_services/'.$data->id_service.'';?>" class="btn btn-danger btn-sm"  onClick="return confirmDialog()"><i class="fa fa-trash"></i> Delete</a>
 								</td>
 								</tr>
 								<?php endforeach ?>

@@ -19,7 +19,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 
-				<?php echo form_open_multipart('Portfolio/create_Portfolio');?>
+				<?php echo form_open_multipart('portfolio/create_portfolio');?>
 				<div class="box-body">
 					<div class="form-group">
 						<label for="portfolioname">Portfolio Name :</label>
