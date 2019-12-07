@@ -9,10 +9,10 @@ class Profile extends MY_Controller {
 		//Do your magic here
 		 $this->load->model('M_profile');
 
-		// 	if ($this->session->userdata('level') == '' or $this->session->userdata('level') == 'manager'  ) {
-		// 	# code...
-		// 	redirect(base_url('auth'));
-		// }
+		 if ($this->session->userdata('username') == '') {
+			# code...
+			redirect(base_url('auth'));
+		}
 	}
 
 	 function index()

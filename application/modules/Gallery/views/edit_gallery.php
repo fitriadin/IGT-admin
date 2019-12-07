@@ -4,14 +4,14 @@
 						<ol class="breadcrumb">
 						<li><a href="index.php">Home</a></li>
 						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Edit Portfolio</li>
+						<li class="active">Edit Gallery</li>
 						</ol>
 
 						<div class="content h-100 overflow-auto">
                     <div class="container-fluid">
                         <div class="page-header">
                             <h1 class="page-title">
-                                Edit Portfolio
+                                Edit Gallery
                             </h1>
                             </div>
                             <div class="row row-cards row-deck">
@@ -19,24 +19,22 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 				
-				<?php echo form_open_multipart('Portfolio/update_Portfolio');?>
+				<?php echo form_open_multipart('Gallery/update_Gallery');?>
 				<?php
-							foreach ($portfolio as $data) {
+							foreach ($gallery as $data) {
 							?>
 				<div class="box-body">
 					<div class="form-group">
-						<label for="portfolioname">Service Name :</label>
-						<input type="hidden" class="form-control" name="id_portfolio" id="id_portfolio" value="<?php echo $data->id_portfolio ;?> ">
-						<input type="text" class="form-control" name="portfolioname" id="portfolioname"  value="<?php echo $data->portfolio_name ;?>" required>
+						<label for="galleryname">Gallery Title :</label>
+						<input type="hidden" class="form-control" name="id_gallery" id="id_gallery" value="<?php echo $data->id_gallery ;?> ">
+						<input type="text" class="form-control" name="gallerytitle" id="gallerytitle"  value="<?php echo $data->gallery_title ;?>" required>
 					</div>
 					<div class="form-group">
-						<label for="portfoliodesc">Service Description :</label>
-						<input type="text" class="form-control" name="portfoliodesc" id="portfoliodesc" value="<?php echo $data->portfolio_description ;?>" >
-					</div>				
-					<div class="form-group">
-								<label for="name">Service Image : </label>
-								<input type="hidden" class="form-control" name="old_image" id="old_image" value="<?php echo $data->portfolio_image ;?> ">
-								<img src="<?php echo base_url('assets/images/portfolio/'.$data->portfolio_image) ?>" width="64" />
+								<label for="name">Gallery Image : </label>
+								<input type="hidden" class="form-control" name="old_image" id="old_image" value="<?php echo $data->gallery_image ;?> ">
+								<br>
+								<img src="<?php echo base_url('assets/images/gallery/'.$data->gallery_image) ?>" width="64" />
+								<br><br/>
 								<input type="file" name="filefoto" style="width: 100%;" >
 					
 								</div>

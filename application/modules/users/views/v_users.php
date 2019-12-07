@@ -47,7 +47,7 @@
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
 									<div class="card-header">
-							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">Add User</button>		   
+							<button type="button" class="btn btn-primary btn-lg fa fa-user-plus" data-toggle="modal" data-target="#exampleModal">  Add User</button>		   
 							</div>
 							<table>
 									<thead>

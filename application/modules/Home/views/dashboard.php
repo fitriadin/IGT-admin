@@ -9,7 +9,7 @@
                             <div class="col-lg-12">
                                 <div class="card card-aside">
                                     <div class="card-body d-flex flex-column">
-                                        <h4>Welcome Admin.</h4>
+                                        <h4>Welcome <?php echo $this->session->userdata('username') ?></h4>
                                         <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>
                                         <div class="d-flex align-items-center pt-5 mt-auto">
                                             

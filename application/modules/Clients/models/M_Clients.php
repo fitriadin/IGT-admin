@@ -1,23 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Portfolio extends CI_Model {
-	public function get_all_service(){
-		$this->db->select('*');
-		$this->db->from('portfolio');
-		// $this->db->where('id_service',$sid);
-		return $query=$this->db->get()->result();
-		// return $query;
-	} 
+class M_Clients extends CI_Model {
+	 
 	
 	public function create_($data,$table)
 	{
 		$this->db->insert($table, $data);
 	}
 
-	public function read_portfolio()
+	public function read_clients()
 	{
-		$query = $this->db->get('portfolio');
+		$query = $this->db->get('client');
 		return $query ;
 	}
 

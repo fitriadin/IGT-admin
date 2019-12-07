@@ -9,10 +9,10 @@ class Users extends MY_Controller {
 		//Do your magic here
 		 $this->load->model('M_Users');
 
-		// 	if ($this->session->userdata('level') == '' or $this->session->userdata('level') == 'manager'  ) {
-		// 	# code...
-		// 	redirect(base_url('auth'));
-		// }
+		 if ($this->session->userdata('username') == '') {
+			# code...
+			redirect(base_url('auth'));
+		}
 	}
 
 	 function index()
@@ -44,7 +44,7 @@ class Users extends MY_Controller {
 			# code...
 			$email = $this->input->post('email');
 			$username = $this->input->post('username');
-			$password = $this->input->post('password');
+			$password = md5($this->input->post('password'));
 			$level = $this->input->post('level');
 
 			$data = array(

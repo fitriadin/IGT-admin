@@ -8,11 +8,10 @@ class Portfolio extends MY_Controller {
 		parent::__construct();
 		//Do your magic here
 		 $this->load->model('M_Portfolio');
-		//  $this->load->library('upload');
-		// 	if ($this->session->userdata('level') == '' or $this->session->userdata('level') == 'manager'  ) {
-		// 	# code...
-		// 	redirect(base_url('auth'));
-		// }
+		 if ($this->session->userdata('username') == '') {
+			# code...
+			redirect(base_url('auth'));
+		}
 	}
 
 	 function index()
@@ -207,7 +206,7 @@ class Portfolio extends MY_Controller {
 		);
 		$row = $this->db->where('id_portfolio',$id)->get('portfolio')->row();
 		if ($row->portfolio_image != "default.jpg"){
-			unlink('./assets/images/Portfolio/'.$row->portfolio_image);
+			unlink('./assets/images/portfolio/'.$row->portfolio_image);
 
 		}
         

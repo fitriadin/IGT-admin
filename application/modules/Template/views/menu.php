@@ -88,8 +88,8 @@
                                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                                         <span class="avatar" style="background-image: url(<?php echo base_url(); ?>demo/faces/female/25.jpg)"></span>
                                         <span class="ml-2 d-none d-lg-block">
-                                            <span class="text-default">Jane Pearson</span>
-                                            <small class="text-muted d-block mt-1">Administrator</small>
+                                            <span class="text-default"><?php echo $this->session->userdata('username') ?></span>
+                                            <small class="text-muted d-block mt-1"><?php echo $this->session->userdata('level') ?></small>
                                         </span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -110,7 +110,7 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="dropdown-icon fe fe-help-circle"></i> Need help?
                                         </a>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="<?php echo base_url('/Auth/logout');?>">
                                             <i class="dropdown-icon fe fe-log-out"></i> Sign out
                                         </a>
                                     </div>
