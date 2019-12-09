@@ -18,7 +18,7 @@ class Portfolio extends MY_Controller {
 	{
 		
 		$data = array(
-			'title' => 'Itematik Admin','read_Portfolio' => $this->M_Portfolio->read_Portfolio()->result()
+			'title' => 'Portfolio','read_Portfolio' => $this->M_Portfolio->read_Portfolio()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -94,12 +94,14 @@ class Portfolio extends MY_Controller {
 	}
 	public function add_Portfolio()
 	{
-		
+		$data = array(
+			'title' => 'Portfolio'
+		);
 
-		$this->load->view('template/header');
-		$this->load->view('template/menu' );
-		$this->load->view('portfolio/add_portfolio');
-		$this->load->view('template/footer');
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu' ,$data);
+		$this->load->view('portfolio/add_portfolio',$data);
+		$this->load->view('template/footer',$data);
 
 
 	}
@@ -109,9 +111,12 @@ class Portfolio extends MY_Controller {
 	{
 		$where = array('id_portfolio' => $id );
 
-		$data['portfolio'] = $this->M_Portfolio->edit_($where,'portfolio')->result()
+		$data = array(
+			'title' => 'Portfolio','portfolio' => $this->M_Portfolio->edit_($where,'portfolio')->result()
+		);
+		// $data['portfolio'] = $this->M_Portfolio->edit_($where,'portfolio')->result()
 
-		;
+		// ;
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);

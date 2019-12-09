@@ -1,19 +1,7 @@
 <div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Edit Profile</li>
-						</ol>
-
-						<div class="content h-100 overflow-auto">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                Edit Profile
-                            </h1>
-                            </div>
+						<div class="container-fluid">
                             <div class="row row-cards row-deck">
                             <div class="col-lg-12">
                                 <div class="card card-aside">
@@ -24,7 +12,12 @@
 
 				?>
 				<?php echo form_open('users/update_users');?>
-				<div class="box-body">
+				<div class="card-header">
+                        <h3 class="card-title">Edit User</h3>
+                        </div>			
+					<div class="card-body">
+                        <div class="row">
+                    	<div class="col-lg-12">	
 					<div class="form-group">
 						<label for="alternatif">Email :</label>
 						<input type="hidden" class="form-control" name="id_user" id="id_user"  value="<?php echo $data->id_user ;?>">
@@ -46,7 +39,7 @@
 									
 					</div>
 
-				<div class="box-footer">
+				<div class="card-footer">
 					<a href="<?php echo base_url()?>users" type="cancel" class="btn btn-warning">Cancel</a>
 					<button type="submit" class="btn btn-primary">Update</button>
 				</div>

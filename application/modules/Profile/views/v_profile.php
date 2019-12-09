@@ -1,19 +1,7 @@
 <div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Profile</li>
-						</ol>
-
-						<div class="content h-100 overflow-auto">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                Company Profile
-                            </h1>
-							</div>   
+						<div class="container-fluid">
                             <div class="row row-cards row-deck">
 							
                             <div class="col-lg-12">

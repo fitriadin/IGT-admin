@@ -33,31 +33,19 @@
                     ';
                 }
                 ?>
-	<div class="content h-100 overflow-auto">
+				<div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Data Clients</li>
-						</ol>
-
-						<div class="content h-100 overflow-auto">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                Data Clients
-							</h1>
-							
-							</div>
-                            <div class="row row-cards row-deck">
-							<div class="col-lg-12">
-                                <div class="card card-aside">
-                                    <div class="card-body d-flex flex-column">
+	                    <div class="container-fluid">
+						</div>
+                        <div class="row row-cards row-deck">
+                            <div class="col-12">
+                                <div class="card">
 									<div class="card-header">
-									<a href="<?php echo base_url().'clients/add_clients/';?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
-								</div>
-							<table>
+									<a href="<?php echo base_url().'clients/add_clients/';?>" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Add Service</a>&nbsp;
+									</div>
+									<div class="table-responsive">
+                                        <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
 									<thead>
 							<tr>
 								<th>No.</th>

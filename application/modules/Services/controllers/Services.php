@@ -9,17 +9,17 @@ class Services extends MY_Controller {
 		//Do your magic here
 		 $this->load->model('M_Services');
 		//  $this->load->library('upload');
-		// 	if ($this->session->userdata('level') == '' or $this->session->userdata('level') == 'manager'  ) {
-		// 	# code...
-		// 	redirect(base_url('auth'));
-		// }
+		if ($this->session->userdata('username') == '') {
+			# code...
+			redirect(base_url('auth'));
+		}
 	}
 
 	 function index()
 	{
 		
 		$data = array(
-			'title' => 'Itematik Admin','read_Services' => $this->M_Services->read_Services()->result()
+			'title' => 'Services','read_Services' => $this->M_Services->read_Services()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -95,12 +95,14 @@ class Services extends MY_Controller {
 	}
 	public function add_Services()
 	{
-		
+		$data = array(
+			'title' => 'Services'
+		);
 
-		$this->load->view('template/header');
-		$this->load->view('template/menu' );
-		$this->load->view('services/add_services');
-		$this->load->view('template/footer');
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu',$data );
+		$this->load->view('services/add_services',$data);
+		$this->load->view('template/footer',$data);
 
 
 	}
@@ -109,10 +111,9 @@ class Services extends MY_Controller {
 	public function edit_Services($id)
 	{
 		$where = array('id_service' => $id );
-
-		$data['service'] = $this->M_Services->edit_($where,'service')->result()
-
-		;
+		$data = array(
+			'title' => 'Services','service' => $this->M_Services->edit_($where,'service')->result()
+		);
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);

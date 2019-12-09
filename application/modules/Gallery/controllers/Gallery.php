@@ -18,7 +18,7 @@ class Gallery extends MY_Controller {
 	{
 		
 		$data = array(
-			'title' => 'Itematik Admin','read_gallery' => $this->M_Gallery->read_gallery()->result()
+			'title' => 'Gallery','read_gallery' => $this->M_Gallery->read_gallery()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -89,11 +89,14 @@ class Gallery extends MY_Controller {
 	public function add_Gallery()
 	{
 		
-
-		$this->load->view('template/header');
-		$this->load->view('template/menu' );
-		$this->load->view('gallery/add_gallery');
-		$this->load->view('template/footer');
+		$data = array(
+			'title' => 'Gallery'
+		);
+		
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu',$data );
+		$this->load->view('gallery/add_gallery',$data);
+		$this->load->view('template/footer',$data);
 
 
 	}
@@ -103,10 +106,10 @@ class Gallery extends MY_Controller {
 	{
 		$where = array('id_gallery' => $id );
 
-		$data['gallery'] = $this->M_Gallery->edit_($where,'gallery')->result()
-
-		;
-
+		$data = array(
+			'title' => 'Gallery','gallery' => $this->M_Gallery->edit_($where,'gallery')->result()
+		);
+	
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
 		$this->load->view('gallery/edit_gallery', $data);

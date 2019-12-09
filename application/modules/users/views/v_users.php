@@ -28,28 +28,16 @@
 	<div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Data users</li>
-						</ol>
-
-						<div class="content h-100 overflow-auto">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                Data Users
-							</h1>
-							
-							</div>
-                            <div class="row row-cards row-deck">
-							<div class="col-lg-12">
-                                <div class="card card-aside">
-                                    <div class="card-body d-flex flex-column">
+	                    <div class="container-fluid">
+						</div>
+                        <div class="row row-cards row-deck">
+                            <div class="col-12">
+                                <div class="card">
 									<div class="card-header">
-							<button type="button" class="btn btn-primary btn-lg fa fa-user-plus" data-toggle="modal" data-target="#exampleModal">  Add User</button>		   
-							</div>
-							<table>
+									<button type="button" class="btn btn-primary btn-lg fa fa-user-plus" data-toggle="modal" data-target="#exampleModal">  Add User</button>		   
+									</div>
+									<div class="table-responsive">
+                                        <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
 									<thead>
 							<tr>
 								<th>No.</th>

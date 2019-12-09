@@ -1,19 +1,7 @@
 <div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Edit Gallery</li>
-						</ol>
-
-						<div class="content h-100 overflow-auto">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                Edit Gallery
-                            </h1>
-                            </div>
+						<div class="container-fluid">
                             <div class="row row-cards row-deck">
                             <div class="col-lg-12">
                                 <div class="card card-aside">
@@ -23,8 +11,13 @@
 				<?php
 							foreach ($gallery as $data) {
 							?>
-				<div class="box-body">
-					<div class="form-group">
+			<div class="card-header">
+                        <h3 class="card-title">Edit Gallery</h3>
+                        </div>			
+					<div class="card-body">
+                        <div class="row">
+                    	<div class="col-lg-12">	
+						<div class="form-group">
 						<label for="galleryname">Gallery Title :</label>
 						<input type="hidden" class="form-control" name="id_gallery" id="id_gallery" value="<?php echo $data->id_gallery ;?> ">
 						<input type="text" class="form-control" name="gallerytitle" id="gallerytitle"  value="<?php echo $data->gallery_title ;?>" required>
@@ -40,7 +33,7 @@
 								</div>
 							</div>
 					
-				<div class="box-footer">
+				<div class="card-footer">
 					<button type="submit" class="btn btn-primary fa fa-paper-plane"> Update</button>
 				</div>
 				

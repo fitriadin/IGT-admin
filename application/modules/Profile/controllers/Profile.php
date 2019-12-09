@@ -18,7 +18,7 @@ class Profile extends MY_Controller {
 	 function index()
 	{
 		$data = array(
-			'title' => 'Itematik Admin','read_profile' => $this->M_profile->read_profile()->result()
+			'title' => 'Company Profile','read_profile' => $this->M_profile->read_profile()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -64,7 +64,9 @@ class Profile extends MY_Controller {
 	{
 		$where = array('id_profile' => $id);
 
-		$data['profile'] = $this->M_profile->edit_($where,'profile')->result();
+		$data = array(
+			'title' => 'Company Profile','profile' => $this->M_profile->edit_($where,'profile')->result()
+		);
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);

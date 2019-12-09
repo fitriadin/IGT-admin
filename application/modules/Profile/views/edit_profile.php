@@ -1,13 +1,11 @@
-	<div class="content h-100 overflow-auto">
+<div class="content h-100 overflow-auto">
                     <div class="my-3 my-md-5">
                         <div class="container">
-						<ol class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;  </li>
-						<li class="active">Edit Profile</li>
-						</ol>
-                            <div class="row">
-                            <div class="col-12">
+						<div class="container-fluid">
+                            <div class="row row-cards row-deck">
+                            <div class="col-lg-12">
+                                <div class="card card-aside">
+                                    <div class="card-body d-flex flex-column">
 							<?php echo form_open_multipart('profile/update_profile'); ?>
 							<?php
 							foreach ($profile as $data) {

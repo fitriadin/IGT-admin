@@ -49,7 +49,7 @@
                                 <span class="header-toggler-icon"></span>
                             </a>
                             <div class="nav-item d-md-flex">
-                                <strong>DASHBOARD</strong>
+                                <strong><?php echo $title ?></strong>
                             </div>
                             <div class="d-flex order-lg-2 ml-auto">
                                 

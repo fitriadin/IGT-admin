@@ -18,7 +18,7 @@ class Teams extends MY_Controller {
 	{
 		
 		$data = array(
-			'title' => 'Itematik Admin','read_Teams' => $this->M_Teams->read_Teams()->result()
+			'title' => 'Teams','read_Teams' => $this->M_Teams->read_Teams()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -94,12 +94,15 @@ class Teams extends MY_Controller {
 	}
 	public function add_Teams()
 	{
+		$data = array(
+			'title' => 'Teams'
+		);
 		
 
-		$this->load->view('template/header');
-		$this->load->view('template/menu' );
-		$this->load->view('teams/add_teams');
-		$this->load->view('template/footer');
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu',$data);
+		$this->load->view('teams/add_teams',$data);
+		$this->load->view('template/footer',$data);
 
 
 	}
@@ -109,9 +112,9 @@ class Teams extends MY_Controller {
 	{
 		$where = array('id_team' => $id );
 
-		$data['team'] = $this->M_Teams->edit_($where,'team')->result()
-
-		;
+		$data = array(
+			'title' => 'Teams','team' => $this->M_Teams->edit_($where,'team')->result()
+		);
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);

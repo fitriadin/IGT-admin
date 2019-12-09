@@ -18,7 +18,7 @@ class clients extends MY_Controller {
 	{
 		
 		$data = array(
-			'title' => 'Itematik Admin','read_Clients' => $this->M_Clients->read_Clients()->result()
+			'title' => 'Clients','read_Clients' => $this->M_Clients->read_Clients()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -95,11 +95,14 @@ class clients extends MY_Controller {
 	public function add_Clients()
 	{
 		
-
-		$this->load->view('template/header');
-		$this->load->view('template/menu' );
-		$this->load->view('clients/add_clients');
-		$this->load->view('template/footer');
+		$data = array(
+			'title' => 'Clients'
+		);
+		
+		$this->load->view('template/header',$data);
+		$this->load->view('template/menu',$data );
+		$this->load->view('clients/add_clients',$data);
+		$this->load->view('template/footer',$data);
 
 
 	}
@@ -109,10 +112,10 @@ class clients extends MY_Controller {
 	{
 		$where = array('id_client' => $id );
 
-		$data['client'] = $this->M_Clients->edit_($where,'client')->result()
-
-		;
-
+		$data = array(
+			'title' => 'Clients','client' => $this->M_Clients->edit_($where,'client')->result()
+		);
+	
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
 		$this->load->view('clients/edit_clients', $data);

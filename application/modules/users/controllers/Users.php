@@ -18,7 +18,8 @@ class Users extends MY_Controller {
 	 function index()
 	{
 		$data = array(
-			'title' => 'Itematik Admin','read_users' => $this->M_Users->read_users()->result()
+			'title' => 'Users',
+			'read_users' => $this->M_Users->read_users()->result()
 		);
 		
 		$this->load->view('template/header', $data);
@@ -66,10 +67,10 @@ class Users extends MY_Controller {
 	public function edit_users($id)
 	{
 		$where = array('id_user' => $id );
-
-		$data['user'] = $this->M_Users->edit_($where,'user')->result()
-
-		;
+		$data = array(
+			'title' => 'Users',
+			'user' => $this->M_Users->edit_($where,'user')->result()
+		);
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
